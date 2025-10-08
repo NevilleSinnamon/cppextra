@@ -31,7 +31,7 @@ struct WithoutId {};
 
 int main() 
 {
-    fprintf( stderr, "print C++17\n" );
+    fprintf( stderr, "print C++17 needed for void_t\n" );
     WithId obj1;
     WithoutId obj2;
 
