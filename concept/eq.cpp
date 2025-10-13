@@ -7,13 +7,14 @@ template <typename T1, typename T2>
 concept EqComparable = requires( T1 a, T2 b ) { a==b; };
 
 template <typename T1, typename T2>
-    requires EqComparable< T1, T2>
+    requires EqComparable<T1, T2>
 bool are_eq( T1 a, T2 b)
 {
     return a == b;
 }
 
 template <typename T>
+    requires EqComparable<T, T>
 bool eq( T a, T b )
 {
     return a == b;
@@ -44,6 +45,8 @@ int main(int argc, char* argv[])
     fprintf( stderr, " eq(\"Nev\",\"NeV\") is %d\n", eq(b, c) );
 
     fprintf( stderr, " are_eq(2.0, 2) is %d\n", are_eq(2.0, 2) );
-    // constraint error double void* not compatable. fprintf( stderr, " are_eq(2.0, 2) is %d\n", are_eq(2.0, nullptr) );
+    
+    // constraint error double void* not compatable. 
+    // fprintf( stderr, " are_eq(2.0, nullptr) is %d\n", are_eq(2.0, nullptr) );
 
 }
