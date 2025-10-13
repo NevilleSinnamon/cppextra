@@ -14,6 +14,7 @@ all:    ${BINDIR} \
         ${BINDIR}/print_enable_if \
         ${BINDIR}/concept_examples \
         ${BINDIR}/cond98 \
+        ${BINDIR}/sub \
         ${BINDIR}/decltype \
         ${BINDIR}/true_type \
         ${BINDIR}/no_which \
@@ -65,6 +66,9 @@ ${BINDIR}/enable_if: enable_if.cpp
 
 ${BINDIR}/cond98: cond98.cpp
 	${CPP98} $? -o $@
+
+${BINDIR}/sub: sub.cpp
+	${CPP11} $? -o $@
 
 ${BINDIR}/typedef_template: typedef_template.cpp
 	${CPP98} $? -o $@
