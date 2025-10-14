@@ -71,7 +71,7 @@ struct IdHandler
 ////////////////////////////////////////////////////////////////////////
 
 template<typename T>
-void handle_id(T t, int new_id)
+void handle_id(T t, long new_id)
 {
     IdHandler<T>::type::set_id(t, new_id);
     long id = IdHandler<T>::type::get_id(t);

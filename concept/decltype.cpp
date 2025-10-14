@@ -5,8 +5,6 @@ typedef enum { NO_ID, PARENT_ID, ID } IdType;
 
 ////////////////////////////////////////////////////////////////////////
 
-constexpr IdType which_id(...) { return NO_ID; }
-
 /* produces ambiguous function for HB
 template<typename T>
 constexpr bool which_id(T const& t)
@@ -14,6 +12,8 @@ constexpr bool which_id(T const& t)
     return false;
 }
 */
+
+constexpr IdType which_id(...) { return NO_ID; }
 
 template<typename T>
 constexpr auto which_id(T const& t)->decltype(t.id, IdType{}) 
@@ -76,7 +76,7 @@ struct HB
 ////////////////////////////////////////////////////////////////////////
 
 template<typename T>
-void handle_id(T t, int new_id)
+void handle_id(T t, long new_id)
 {
     IdHandler<T>::set_id(t, new_id);
     long id = IdHandler<T>::get_id(t);

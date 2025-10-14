@@ -43,7 +43,7 @@ struct IdHandlerHB : public HB, IdHandler
 
 ////////////////////////////////////////////////////////////////////////
 
-void handle_id(IdHandler * handler, int new_id)
+void handle_id(IdHandler * handler, long new_id)
 {
     handler->set_id(new_id);
     long id = handler->get_id();

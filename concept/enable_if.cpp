@@ -78,7 +78,7 @@ struct HB
 ////////////////////////////////////////////////////////////////////////
 
 template<typename T>
-void handle_id(T t, int new_id)
+void handle_id(T t, long new_id)
 {
     IdHandler<T>::set_id(t, new_id);
     long id = IdHandler<T>::get_id(t);
