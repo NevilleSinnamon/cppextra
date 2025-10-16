@@ -10,6 +10,7 @@ BINDIR=bin
 all:    ${BINDIR} \
         ${BINDIR}/spaceship \
         ${BINDIR}/eq \
+        ${BINDIR}/couple \
         ${BINDIR}/typedef_template \
         ${BINDIR}/print_enable_if \
         ${BINDIR}/concept_examples \
@@ -48,6 +49,9 @@ ${BINDIR}/print_enable_if: print_enable_if.cpp
 
 ${BINDIR}/eq: eq.cpp
 	${CPP20} $? -o $@
+
+${BINDIR}/couple: couple.cpp
+	${CPP11} $? -o $@
 
 ${BINDIR}/decltype: decltype.cpp
 	${CPP11} $? -o $@

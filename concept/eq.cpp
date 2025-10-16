@@ -21,6 +21,7 @@ bool eq( T a, T b )
 }
 
 template <typename T=char*>
+    requires EqComparable<T, T>
 bool eq( char* a, char* b )
 {
     return strcmp(a, b) == 0;

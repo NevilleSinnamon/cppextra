@@ -52,7 +52,7 @@ void handle_id(IdHandler * handler, long new_id)
 
 int main(int argc, char* argv[])
 {
-    fprintf(stderr, "C++98 using \n" );
+    fprintf(stderr, "C++11 using OO solution \n" );
 
     IdHandlerNOS nos;
     IdHandlerHB  hb;
