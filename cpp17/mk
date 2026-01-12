@@ -1,0 +1,10 @@
+#!/bin/sh
+
+CPP=/usr/bin/g++-10
+
+STD20="-std=c++20"
+STD17="-std=c++17"
+STD11="-std=c++11"
+STD98="-std=c++98"
+
+${CPP} ${STD11} -I. ${1}.cpp -o bin/$1
