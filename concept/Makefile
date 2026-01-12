@@ -21,6 +21,7 @@ all:    ${BINDIR} \
         ${BINDIR}/no_which \
         ${BINDIR}/id_type \
         ${BINDIR}/enable_if \
+        ${BINDIR}/concept_no_which \
         ${BINDIR}/concept 
 
 err: ${BINDIR}/concept_error_template_class_overload_redefine \
@@ -36,6 +37,9 @@ ${BINDIR}/concept_examples: concept_examples.cpp
 	${CPP20} $? -o $@
 
 ${BINDIR}/concept: concept.cpp
+	${CPP20} $? -o $@
+
+${BINDIR}/concept_no_which: concept_no_which.cpp
 	${CPP20} $? -o $@
 
 ${BINDIR}/concept_error_template_class_overload_redefine: concept_error_template_class_overload_redefine.cpp
